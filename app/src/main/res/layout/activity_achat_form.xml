@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor"
+    android:fitsSystemWindows="true"
+    tools:context=".farmers.FarmerFormActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/myAppbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/brown_color"
+        android:title="Effetuer un achat"
+        android:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:navigationIcon="@drawable/ic_back_24"
+        app:navigationIconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/myAppbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_balance_24"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="Poids(kg)"
+                android:inputType="number"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="prix(Fcfa)"
+                android:inputType="number"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/qualityCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp"
+                app:contentPaddingBottom="10dp"
+                app:contentPaddingLeft="10dp"
+                app:contentPaddingRight="10dp"
+                app:contentPaddingTop="5dp"
+                tools:ignore="MissingConstraints,NotSibling">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/farmeractivty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_extra_bold"
+                        android:text="sélectionnez la qualité"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="2dp"
+                        android:background="@color/brown_color" />
+
+                    <Spinner
+                        android:id="@+id/qualitySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/paymentMethodCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp"
+                app:contentPaddingBottom="10dp"
+                app:contentPaddingLeft="10dp"
+                app:contentPaddingRight="10dp"
+                app:contentPaddingTop="5dp"
+                tools:ignore="MissingConstraints,NotSibling">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_extra_bold"
+                        android:text="sélectionnez un moyen de paiment"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="2dp"
+                        android:background="@color/brown_color" />
+
+                    <Spinner
+                        android:id="@+id/paymentSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <EditText
+                android:id="@+id/mixteAmount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="Entrez le montant en espèce"
+                android:inputType="number"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:text="Total"
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/totalAmount"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16sp" />
+            </TableRow>
+
+          <Button
+              android:id="@+id/btnSaveSold"
+              android:layout_margin="20dp"
+              android:padding="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/btn_login_bg"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/white"
+              android:text="Enregistrer" />
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

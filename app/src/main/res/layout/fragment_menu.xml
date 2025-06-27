@@ -1,0 +1,46 @@
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootCard"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp"
+    android:layout_margin="1dp"
+    android:background="@color/grey_color"
+    >
+<LinearLayout
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/iconView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/countView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_extra_bold"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/libelleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:fontFamily="@font/nunito_extra_bold"
+        android:textStyle="bold" />
+</LinearLayout>
+</androidx.cardview.widget.CardView>

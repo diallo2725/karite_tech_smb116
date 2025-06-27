@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="5dp"
+android:layout_marginBottom="5dp"
+android:background="@color/backColor"
+app:cardCornerRadius="10dp"
+app:cardElevation="2dp"
+app:contentPadding="5dp"
+app:contentPaddingBottom="10dp"
+app:contentPaddingLeft="2dp"
+app:contentPaddingRight="2dp"
+app:contentPaddingTop="5dp"
+tools:ignore="MissingConstraints,NotSibling">
+<LinearLayout
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginLeft="10dp"
+    android:orientation="vertical">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="start"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/nunito_medium"
+            android:text="Longeur(m)"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/longeurParc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/brown_color" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/nunito_medium"
+            android:text="Largeur(m)"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/largeurParc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/brown_color" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:textAlignment="textStart"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/nunito_medium"
+            android:text="Longitude"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/lngParc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd"
+            android:textSize="16sp" />
+    </TableRow>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/brown_color" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:textAlignment="textStart"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/nunito_medium"
+            android:text="Latitude"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/latParc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <ImageView
+        android:id="@+id/parcImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:textAlignment="textStart"
+        android:orientation="horizontal"
+        />
+</LinearLayout>
+</androidx.cardview.widget.CardView>

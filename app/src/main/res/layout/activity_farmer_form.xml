@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor"
+    android:fitsSystemWindows="true"
+    tools:context=".farmers.FarmerFormActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/myAppbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/brown_color"
+        android:title="Ajouter un producteur"
+        android:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:navigationIcon="@drawable/ic_back_24"
+        app:navigationIconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/myAppbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="Nom"
+                android:inputType="text"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="prénoms"
+                android:inputType="text"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <EditText
+                android:id="@+id/date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints="date de naissance"
+                android:background="@drawable/input_bg"
+                android:clickable="true"
+                android:drawableStart="@drawable/calendar"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:focusable="false"
+                android:hint="date de naissance"
+                android:inputType="none"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints,TextFields" />
+
+            <EditText
+                android:id="@+id/locality"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_city_24"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="Localité"
+                android:inputType="text"
+                android:padding="5dp"
+
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <EditText
+                android:id="@+id/farmerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="Téléphone"
+                android:maxLength="14"
+                android:inputType="number"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints,TextFields" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSexFarmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="1dp"
+            app:contentPaddingBottom="10dp"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingRight="10dp"
+            app:contentPaddingTop="5dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/sexeFarmer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:text="sélectionnez le sexe du producteur"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="2dp"
+                    android:background="@color/brown_color" />
+
+                <RadioGroup
+                    android:id="@+id/sexe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sexeHomme"
+                        android:layout_width="146dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:drawableStart="@drawable/ic_man"
+                        android:drawablePadding="3dp"
+                        android:text="Homme" />
+
+                    <RadioButton
+                        android:id="@+id/sexeFemme"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:drawableStart="@drawable/ic_woman"
+                        android:drawablePadding="3dp"
+                        android:text="Femme" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSexActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="1dp"
+            app:contentPaddingBottom="10dp"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingRight="10dp"
+            app:contentPaddingTop="5dp"
+            tools:ignore="MissingConstraints,NotSibling">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/farmeractivty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:text="sélectionnez l'activité du producteur"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="2dp"
+                    android:background="@color/brown_color" />
+
+                <Spinner
+                    android:id="@+id/farmerActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/photoFr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="1dp"
+            app:contentPaddingBottom="10dp"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingRight="10dp"
+            app:contentPaddingTop="2dp"
+            tools:ignore="MissingConstraints,NotSibling">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <ImageView
+                    android:id="@+id/farmerPhoto"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/grey_color_2"
+                    android:scaleType="centerCrop" />
+
+
+                <Button
+                    android:id="@+id/btnTakePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_login_bg"
+                    android:textColor="@color/white"
+                    android:padding="5dp"
+                    android:text="Prendre une photo" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+          <Button
+              android:id="@+id/btnsaveFarmer"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/btn_login_bg"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/white"
+              android:text="Enregistrer" />
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

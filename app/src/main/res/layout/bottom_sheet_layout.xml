@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/bottomSheetTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Un producteur trouvé"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_extra_bold"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+         android:background="@color/brown_color" />
+    <ImageView
+        android:id="@+id/imageFarmer"
+        android:layout_width="100dp"
+        android:layout_height="97dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        />
+    <TextView
+        android:id="@+id/farmerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito_medium"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/farmerPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito_medium"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/activityFarmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito_medium"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        >
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/grey_color_4"
+            android:text="Annuler"
+            android:fontFamily="@font/nunito_medium"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+             />
+        <Button
+            android:id="@+id/btnBuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/black"
+            android:text="Acheter"
+            android:fontFamily="@font/nunito_medium"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+    </TableRow>
+
+</LinearLayout>

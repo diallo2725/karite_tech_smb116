@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/backColor"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    app:contentPaddingBottom="10dp"
+    app:contentPaddingLeft="2dp"
+    app:contentPaddingRight="2dp"
+    app:contentPaddingTop="5dp"
+    tools:ignore="MissingConstraints,NotSibling">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/farmerPhoto"
+                    android:layout_width="100dp"
+                    android:layout_height="97dp"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="MissingConstraints"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/farmerPhoto"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <TextView
+                    android:id="@+id/farmerPhone"
+                    android:layout_width="128dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/farmerPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/fullname" />
+
+                <TextView
+                    android:id="@+id/dateOfBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/farmerPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/farmerPhone" />
+
+                <TextView
+                    android:id="@+id/sexeFarmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toEndOf="@+id/farmerPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/farmerPhone" />
+
+                <TextView
+                    android:id="@+id/activityFarmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp"
+                    app:layout_constraintStart_toEndOf="@+id/farmerPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/farmerPhone" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/my_container_bg">
+
+            <TextView
+                android:id="@+id/editBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawablePadding="3dp"
+                android:drawableTint="@color/brown_color"
+                android:focusable="true"
+                android:text="Modifier"
+                android:textColor="@color/brown_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_delete"
+                android:drawablePadding="3dp"
+                android:drawableTint="@color/red_color"
+                android:focusable="true"
+                android:text="Supprimer"
+                android:textColor="@color/red_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor"
+    android:fitsSystemWindows="true"
+    tools:context=".farmers.FarmerFormActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/myAppbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/brown_color"
+        android:title="Ajouter un parc"
+        android:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:navigationIcon="@drawable/ic_back_24"
+        app:navigationIconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/myAppbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/longeur"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_longeur"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="Longeur(m)"
+                android:inputType="number"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <EditText
+                android:id="@+id/largeur"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_largeur"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="largeur(m)"
+                android:inputType="number"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <EditText
+                android:id="@+id/longitude"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="Longitude"
+                android:inputType="number"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+            <EditText
+                android:id="@+id/latitude"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="3dp"
+                android:ems="20"
+                android:hint="Latitude"
+                android:inputType="number"
+                android:padding="5dp"
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <org.osmdroid.views.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+
+            <TextView
+                android:layout_marginVertical="20dp"
+                android:id="@+id/btnGetPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:clickable="true"
+                android:drawablePadding="3dp"
+                android:drawableTint="@color/brown_color"
+                android:focusable="true"
+                android:text="Capturer la position"
+                android:textColor="@color/brown_color"
+                app:drawableStartCompat="@drawable/ic_edit"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnSaveParc"
+                android:layout_margin="20dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_login_bg"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="@string/enregistrer_le_parc" />
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
